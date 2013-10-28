@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntryPoint" >
+
+    <Button
+        android:id="@+id/loginscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="141dp"
+        android:text="login page" />
+
+    <Button
+        android:id="@+id/friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginscreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:text="friends_list" />
+
+    <Button
+        android:id="@+id/refresh_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/loginscreen"
+        android:layout_alignRight="@+id/friends"
+        android:layout_marginBottom="59dp"
+        android:text="refresh friends" />
+
+    <Button
+        android:id="@+id/pendingTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/friends"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:text="pending transaction" />
+
+</RelativeLayout>

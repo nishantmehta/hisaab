@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nishant.hisaab"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.nishant.hisaab.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.nishant.hisaab.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock.Light" >
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.nishant.hisaab" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.nishant.hisaab.GCMIntentService" />
+
+        <activity
+            android:name="com.hisaab.ui.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.MainScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.TransactionActivity"
+            android:label="@string/title_activity_main_screen" >
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.EntryPoint"
+            android:label="@string/title_activity_entry_point" >
+            
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.AccountSummary"
+            android:label="@string/title_activity_account_summary" >
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.AccountDetails"
+            android:label="@string/title_activity_account_details" >
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.AddTransaction"
+            android:label="@string/title_activity_add_transaction" >
+        </activity>
+        <activity
+            android:name="com.nishant.hisaab.TransationRequest"
+            android:label="@string/title_activity_transation_request" >
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.AddNotificationTransaction"
+            android:label="@string/title_activity_add_notification_transaction" >
+        </activity>
+        <activity
+            android:name="com.hisaab.ui.PendingTransaction"
+            android:label="@string/title_activity_pending_transaction" >
+        </activity>
+    </application>
+
+</manifest>

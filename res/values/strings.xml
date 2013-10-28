@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Accounts</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="AppTitle">Cloud Hisaab</string>
+    <string name="main_register_text">This will help us register you.</string>
+    <string name="register">Register</string>
+    <string name="phone_number">Phone number</string>
+    <string name="name">Name</string>
+    <string name="main_name_text">enter your name</string>
+    <string name="register_loading_text">making you a part of our system</string>
+    <string name="refresh_service_name">Hisaab contacts refresh</string>
+    <string name="account_summary_text">your outstanding balance is </string>
+    <string name="toPay_text">To pay</string>
+    <string name="toTake_text">To take</string>
+
+    <!-- API URL FOR THE APP -->
+    <string name="register_URL">http://hisaab.hostoi.com/index.php/register_controller/register_user/</string>
+    <string name="refresh_URL">http://hisaab.hostoi.com/index.php/refresh_controller/refresh_contacts</string>
+    <string name="send_transaction_URL">http://hisaab.hostoi.com/index.php/send_message_controller/decode_json/</string>
+
+    <!-- GCM API Key -->
+    <string name="GCM_Sender_Key">735558406276</string>
+
+    <!-- Debug tags -->
+    <string name="GCM_debug">hisaab GCM</string>
+    <string name="hisaab_general">resulthisaab</string>
+    <string name="hisaab_database"></string>
+    <string name="title_activity_main_screen">MainScreen</string>
+    <string name="title_activity_entry_point">EntryPoint</string>
+    <string name="title_activity_account_summary">AccountSummary</string>
+    <string name="title_activity_account_details">AccountDetails</string>
+    <string name="title_activity_add_transaction">AddTransaction</string>
+    <string name="title_activity_transation_request">TransationRequest</string>
+    <string name="title_activity_add_notification_transaction">AddNotificationTransaction</string>
+    <string name="title_activity_pending_transaction">PendingTransaction</string>
+
+</resources>

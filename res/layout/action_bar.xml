@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="left"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#356AA0" >
+
+        <ImageButton
+            android:id="@+id/HomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            
+            android:layout_centerVertical="true"
+            
+            android:src="@drawable/ic_action_cloud" />
+
+        <ImageButton
+            android:id="@+id/pendingTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            
+            android:layout_centerVertical="true"
+           
+            android:src="@drawable/ic_action_notification" />
+
+        <ImageButton
+            android:id="@+id/Refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            
+            android:layout_toLeftOf="@+id/pendingTransaction"
+           
+            android:src="@drawable/ic_action_refresh" />
+
+        <TextView
+            android:id="@+id/actionBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19dp"
+            android:layout_toRightOf="@+id/HomeButton"
+            android:text="Accounts"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

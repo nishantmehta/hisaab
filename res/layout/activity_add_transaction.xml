@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTransaction" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AddTransaction" >
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toPay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="58dp"
+                android:ems="10"
+                android:hint="Amount"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/descriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/amount"
+                android:layout_below="@+id/amount"
+                android:layout_marginTop="41dp"
+                android:ems="10"
+                android:hint="Add Description"
+                android:inputType="textPersonName" >
+
+                <requestFocus />
+            </EditText>
+
+            <RadioGroup
+                android:id="@+id/radioToPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descriptionText"
+                android:layout_centerHorizontal="true" >
+
+                <RadioButton
+                    android:id="@+id/toPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:text="@string/toPay_text" />
+
+                <RadioButton
+                    android:id="@+id/toTake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:text="@string/toTake_text" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/addTransactionButton"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioToPay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="Add" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
